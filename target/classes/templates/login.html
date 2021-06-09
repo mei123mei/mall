@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<title>登录</title>
+
+<link rel="stylesheet" href="/login/css/style.css">
+
+<body>
+
+<div class="login-container">
+    <h1>智能商城网站</h1>
+
+    <div class="connect">
+        <p>mei</p>
+    </div>
+
+    <form action="/check" method="post" id="loginForm" onsubmit='return checkForm()'>
+        <div>
+            <input type="text" id="un" name="username" class="username" placeholder="请输入用户名" autocomplete="off" value="" required/>
+        </div>
+        <div>
+            <input type="password" id="pw" name="password" class="password" placeholder="请输入密码"  oncontextmenu="return false" onpaste="return false" required />
+        </div>
+        <button id="submit" type="submit">登 陆</button>
+    </form>
+
+    <a href="/register">
+        <button type="button" class="register-tis">还有没有账号？</button>
+    </a>
+
+</div>
+
+<script src="/login/js/jquery.min.js"></script>
+<script src="login/js/common.js"></script>
+<!--背景图片自动更换-->
+<script src="login/js/supersized.3.2.7.min.js"></script>
+<script src="login/js/supersized-init.js"></script>
+<!--表单验证-->
+<script src="/login/js/jquery.validate.min.js?var1.14.0"></script>
+
+
+</body>
+<script src="/md5.js"></script>
+
+<script>
+
+    function checkForm(){
+        let password = document.getElementById("pw");
+        let md5value=$.md5(password.value);
+        password.value=md5value;
+        return true;
+    }
+</script>
+
+
+
+</html>

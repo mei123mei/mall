@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta name="renderer" content="webkit">
+    <title>我的购物车-云购物商城</title>
+    <link rel="shortcut icon" type="image/x-icon" href="cart/img/icon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="cart/css/base.css">
+    <link rel="stylesheet" type="text/css" href="cart/css/home.css">
+    <script type="text/javascript" src="cart/js/jquery.js"></script>
+    <script type="text/javascript" src="cart/js/index.js"></script>
+    <script type="text/javascript" src="cart/js/modernizr-custom-v2.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="mall/css/base.css">
+    <link rel="stylesheet" href="mall/css/index.css">
+    <script type="text/javascript" src="mall/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="mall/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="mall/js/banner.index.js"></script>
+    <script type="text/javascript" src="mall/js/hun.index.js"></script>
+
+</head>
+<body>
+
+<div class="w-all w-minw bg-cf5f5f5 ovhidden">
+    <div class="w-main m-auto">
+        <div class="fl"> <span class="fs-14 line-h30 ftc-6b6b6b dsblock fl"> 送货至：广东省,广州市,番禺区 </span> <a href="#" class="tx-ind dsblock w-12 fl bg_icon add-sele m-l-5 hg-30">地址选择</a> <a href="#" class="dsblock fl line-h30 fs-14 ftc-e23435 m-l-40">${user.username}</a> <a href="/login" class="dsblock fl line-h30 fs-14 ftc-e23435 m-l-40">退出登录</a></div>
+        <ul class="topnav fr">
+            <li class="fl"><a href="#" class="fs-14 ftc-6b6b6b line-h30 fl m-l-20 m-r-20">我的订单</a></li>
+            <i class="dsblock bg_icon topnav_line fl tx-ind w-1 hg-30">我的订单</i>
+            <li class="fl"><a href="#" class="fs-14 ftc-6b6b6b line-h30 fl m-l-20 m-r-20">我的收藏</a></li>
+            <i class="dsblock bg_icon topnav_line fl tx-ind w-1  hg-30">我的收藏</i>
+            <li class="fl"><a href="#" class="fs-14 ftc-6b6b6b line-h30 fl m-l-20 m-r-20">我的地址</a></li>
+            <i class="dsblock bg_icon topnav_line fl tx-ind w-1  hg-30">我的地址</i>
+            <li class="fl"><a href="#" class="fs-14 ftc-6b6b6b line-h30 fl m-l-20 m-r-20">个人资料</a></li>
+<!--            <i class="dsblock bg_icon topnav_line fl tx-ind w-1  hg-30">个人资料</i>-->
+        </ul>
+    </div>
+</div>
+
+<div class="w-all w-minw ovhidden bd-bs-ed4f2c">
+    <div class="w-main m-auto">
+        <ul class="w-main nav">
+            <li class="fl"><a href="index.html" class="fl dsblock p-l-13 p-r-13 m-l-20 fs-16 ftc-626262 line-45 navactive">首页</a></li>
+            <li class="fl"><a href="#" class="fl dsblock p-l-13 p-r-13 m-l-20 fs-16 ftc-626262 line-45">商城</a></li>
+            <li class="fl"><a href="#" class="fl dsblock p-l-13 p-r-13 m-l-20 fs-16 ftc-626262 line-45">活动专区</a></li>
+            <li class="fl"><a href="#" class="fl dsblock p-l-13 p-r-13 m-l-20 fs-16 ftc-626262 line-45">限时抢购</a></li>
+
+            <div class="clear"></div>
+        </ul>
+    </div>
+</div>
+
+<section id="pc-jie">
+    <div class="center ">
+        <ul class="pc-shopping-title clearfix">
+            <li><a href="#" class="cu">全部商品(10)</a></li>
+<!--            <li><a href="#">限时优惠(7)</a></li>-->
+<!--            <li><a href="#">库存紧张(0)</a></li>-->
+        </ul>
+    </div>
+    <div class="pc-shopping-cart center">
+        <div class="pc-shopping-tab">
+            <table>
+                <thead>
+                <tr class="tab-0">
+                    <th class="tab-1"><input type="checkbox" name="s_all" class="s_all tr_checkmr" id="s_all_h"><label for=""> 全选</label></th>
+                    <th class="tab-2">商品</th>
+                    <th class="tab-3">商品信息</th>
+                    <th class="tab-4">单价</th>
+                    <th class="tab-5">数量</th>
+                    <th class="tab-6">小计</th>
+                    <th class="tab-7">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+<!--                <tr>-->
+<!--                    <td colspan="7" style="padding-left:10px; background:#eee">-->
+<!--                        <input type="checkbox" checked >-->
+<!--                        <label for="">云购物自营</label>-->
+<!--                        <a href="#" style="position:relative;padding-left:50px"><i class="icon-kefu"></i>联系客服</a>-->
+<!--                        <ul class="clearfix fr" style="padding-right:20px">-->
+<!--&lt;!&ndash;                            <li><i class="pc-shop-car-yun"></i>满109元减10</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <li><i class="pc-shop-car-yun"></i>领取3种优惠券, 最高省30元</li>&ndash;&gt;-->
+<!--                        </ul>-->
+<!--                    </td>-->
+<!--                </tr>-->
+                <tr>
+                    <th><input type="checkbox"  style="margin-left:10px; float:left"></th>
+                    <th class="tab-th-1">
+                        <a href="#"><img src="images/shangpinxiangqing/X1.png" width="100%" alt=""></a>
+                        <a href="#" class="tab-title">赛亿（shinee)取暖器家用/取暖电器/电暖器/电暖气台式摇头暖风机HN2118PT </a>
+                    </th>
+                    <th>
+                        <p>颜色：黑色</p>
+                        <p>规格：落地款</p>
+                    </th>
+                    <th>
+                        <p>399.99</p>
+                        <p class="red">299.99</p>
+                    </th>
+                    <th class="tab-th-2">
+                        <span>-</span>
+                        <input type="text" value="1" maxlength="3" placeholder="" class="shul">
+                        <span>+</span>
+                    </th>
+                    <th class="red">299.99</th>
+                    <th><a href="#">删除</a></th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox"  style="margin-left:10px; float:left"></th>
+                    <th class="tab-th-1">
+                        <a href="#"><img src="images/shangpinxiangqing/X-1.png" width="100%" alt=""></a>
+                        <a href="#" class="tab-title">赛亿（shinee)取暖器家用/取暖电器/电暖器/电暖气台式摇头暖风机HN2118PT </a>
+                    </th>
+                    <th>
+                        <p>颜色：黑色</p>
+                        <p>规格：落地款</p>
+                    </th>
+                    <th>
+                        <p>399.99</p>
+                        <p class="red">299.99</p>
+                    </th>
+                    <th class="tab-th-2">
+                        <span>-</span>
+                        <input type="text" value="1" maxlength="3" placeholder="" class="shul">
+                        <span>+</span>
+                    </th>
+                    <th class="red">299.99</th>
+                    <th><a href="#">删除</a></th>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <div style="height:10px"></div>
+    <div class="center">
+        <div class="clearfix pc-shop-go">
+            <div class="fl pc-shop-fl">
+                <input type="checkbox" placeholder="">
+                <label for="">全选</label>
+                <a href="#">删除</a>
+                <a href="#">清楚失效商品</a>
+            </div>
+            <div class="fr pc-shop-fr">
+                <p>共有 <em class="red pc-shop-shu">2</em> 款商品，总计（不含运费）</p>
+                <span>¥ 699.00</span>
+                <a href="my-add.html">去付款</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div style="height:100px"></div>
+
+
+<script type="text/javascript">
+    //hover 触发两个事件，鼠标移上去和移走
+    //mousehover 只触发移上去事件
+    $(".top-nav ul li").hover(function(){
+        $(this).addClass("hover").siblings().removeClass("hover");
+        $(this).find("li .nav a").addClass("hover");
+        $(this).find(".con").show();
+    },function(){
+        //$(this).css("background-color","#f5f5f5");
+        $(this).find(".con").hide();
+        //$(this).find(".nav a").removeClass("hover");
+        $(this).removeClass("hover");
+        $(this).find(".nav a").removeClass("hover");
+    })
+</script>
+<div class="w-all w-minw bg-c1d1d1d ovhidden p-t-15">
+    <div class="w-main m-auto footernav">
+        <dl class="fl w-100 m-l-30 m-r-50">
+            <dt><a href="#" class="fl dsblock fs-18 ftc-ffffff line-45 w-all text-c">新手上路</a></dt>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">售后流程</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">购物流程</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">订购方式</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">在线支付</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">公司转账</a></dd>
+        </dl>
+        <dl class="fl w-100 m-l-30 m-r-50">
+            <dt><a href="#" class="fl dsblock fs-18 ftc-ffffff line-45 w-all text-c">配送方式</a></dt>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">货到付款</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">区域配送</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">支付查询</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">支付方式说明</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">如何送礼</a></dd>
+        </dl>
+        <dl class="fl w-100 m-l-30 m-r-50">
+            <dt><a href="#" class="fl dsblock fs-18 ftc-ffffff line-45 w-all text-c">购物指南</a></dt>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">常见问题</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">订购流程</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">注册新会员</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">团购/机票</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">联系客服</a></dd>
+        </dl>
+        <dl class="fl w-100 m-l-30 m-r-50">
+            <dt><a href="#" class="fl dsblock fs-18 ftc-ffffff line-45 w-all text-c">售后服务</a></dt>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">退换货原则</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">售后服务保证</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">换货流程</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">退款说明</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">返修/退换货</a></dd>
+        </dl>
+        <dl class="fl w-100 m-l-30 m-r-50">
+            <dt><a href="#" class="fl dsblock fs-18 ftc-ffffff line-45 w-all text-c">关于我们</a></dt>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">网站故障报告</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">选机咨询</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">投诉与建议</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">节能补贴</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">礼品</a></dd>
+        </dl>
+        <div class="w-180 fr m-r-50">
+            <h3 class="fs-18 ftc-ffffff line-45">联系我们</h3>
+            <p class="fs-20 ftc-ca0303 line-h36">100-000-0000</p>
+            <p class="fs-14 ftc-ffffff line-h36"> 周一至周日9:00-18:00 <br/>
+            </p>
+            <p class="fs-14 ftc-e3393a line-40 bd-s-ce3393a ovhidden bg_icon tel_icon footer_tel">24小时在线客服</p>
+        </div>
+    </div>
+</div>
+<div class="w-all w-minw bg-c000000 ovhidden">
+    <div class="w-main m-auto text-c fs-14 ftc-777777 line-60"> © 2021 版权所有，并保留所有权利。 </div>
+</div>
+</body>
+</html>

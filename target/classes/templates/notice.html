@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>基本设置</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="lib/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="css/admin.css" media="all">
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-col-md12">
+        <div class="layui-navs">
+					<span class="layui-breadcrumb" lay-separator="—">
+						<a href="javascript:;">通知公告</a>
+						<a href="javascript:;">公告管理</a>
+						<a><cite>新增公告</cite></a>
+					</span>
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;float:right;height: 36px;" href="javascript:location.replace(location.href);" title="刷新">
+                <i class="layui-icon layui-icon-refresh" style="line-height:36px;font-size: 16px;"></i>
+            </a>
+        </div>
+    </div>
+    <div class="layui-col-md12">
+        <form class="layui-form layui-form-pane" action="/savenotice" id="frm-reg" onsubmit='return addTime()'>
+            <div class="layui-card">
+                <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+
+                    <div class="layui-tab-content" style="height: 100%;">
+                        <div class="layui-tab-item layui-show">
+
+
+                            <div class="layui-form-item layui-form-text">
+                                <label class="layui-form-label">新增公告</label>
+                                <div class="layui-input-block">
+                                    <textarea placeholder="请输入公告内容" class="layui-textarea" name="info" id="close_reason"></textarea>
+                                </div>
+                                <input type="hidden" name="time" id="time" value=""/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item" style="margin-left: 50px;">
+
+                <button class="layui-btn" id="execute"><i class="layui-icon layui-icon-form"></i>保存</button>
+            </div>
+        </form>
+
+
+    </div>
+</div>
+</body>
+</html>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="lib/layui/layui.js"></script>
+<script src="js/admin.js"></script>
+<script>
+    layui.use('upload', function(){
+        let upload = layui.upload;
+
+
+        //执行实例
+        let uploadInst = upload.render({
+            elem: '#up' //绑定元素
+            ,url: '/logoupload' //上传接口
+
+            ,done: function(data){
+                let path=data.path;
+                // console.log(path)
+                //上传完毕回调
+                // $("#pic").src(mix);
+                $("#pic").attr('src',path);
+                $("#hid").val(path);
+
+            }
+            ,error: function(){
+                //请求异常回调
+
+            }
+        });
+    });
+
+    function addTime(){
+        let myDate = new Date();
+        //获取当前年
+        let year=myDate.getFullYear();
+        //获取当前月
+        let month=myDate.getMonth()+1;
+        //获取当前日
+        let date=myDate.getDate();
+        let h=myDate.getHours();       //获取当前小时数(0-23)
+        let m=myDate.getMinutes();     //获取当前分钟数(0-59)
+        if(m<10) m = '0' + m;
+        let s=myDate.getSeconds();
+        if(s<10) s = '0' + s;
+        let now=year+'-'+month+"-"+date+" "+h+':'+m+":"+s;
+
+        $("#time").val(now);
+
+        return true;
+    }
+</script>

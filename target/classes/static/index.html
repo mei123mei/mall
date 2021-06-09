@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页_商城</title>
+    <meta name="keywords" content="商城">
+    <meta name="description" content="商城">
+    <meta name="author" content="/">
+    <link rel="stylesheet" href="mall/css/base.css">
+    <link rel="stylesheet" href="mall/css/index.css">
+    <script type="text/javascript" src="mall/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="mall/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="mall/js/banner.index.js"></script>
+
+
+</head>
+<body style="padding: 0 210px 0 170px;">
+<!--web-top start-->
+<div class="w-all w-minw bg-cf5f5f5 ovhidden">
+    <div class="w-main m-auto">
+        <div class="fl" id="name"><span class='fs-14 line-h30 ftc-6b6b6b dsblock fl'> 送货至：广东省广州市番禺区 </span>  <a href='#' class='dsblock fl line-h30 fs-14 ftc-e23435 m-l-40'>&nbsp;&nbsp;</a> <a href='/login' class='dsblock fl line-h30 fs-14 ftc-e23435 m-l-40\'>Hi,请登录</a>
+        </div>
+        <ul class="topnav fr">
+            <li class="fl"><a href="/myorder" class="fs-14 ftc-6b6b6b line-h30 fl m-l-20 m-r-20">我的订单</a></li>
+            <i class="dsblock bg_icon topnav_line fl tx-ind w-1 hg-30">我的订单</i>
+            <li class="fl"><a href="/mycollect" class="fs-14 ftc-6b6b6b line-h30 fl m-l-20 m-r-20">我的收藏</a></li>
+            <i class="dsblock bg_icon topnav_line fl tx-ind w-1  hg-30">我的收藏</i>
+            <li class="fl"><a href="/business" class="fs-14 ftc-6b6b6b line-h30 fl m-l-20 m-r-20">商家操作</a></li>
+            <i class="dsblock bg_icon topnav_line fl tx-ind w-1  hg-30">商家操作</i>
+            <li class="fl"><a href="/info" class="fs-14 ftc-6b6b6b line-h30 fl m-l-20 m-r-20">个人资料</a></li>
+            <!--            <i class="dsblock bg_icon topnav_line fl tx-ind w-1  hg-30">个人资料</i>-->
+
+        </ul>
+    </div>
+</div>
+<!--web-top end-->
+<div class="w-main m-auto m-t-30 m-b-16 ovhidden">
+    <!--web logo start-->
+    <a href="#" class="logo_top fl"><img src="logo/logo2.jpg" width="195" height="56" alt="商城logo"/></a>
+    <!--web logo end-->
+    <!--web search start-->
+    <div class="search m-l-230 w-455 m-t-5 fl">
+        <form action="#" method="get" id="searchform" name="searchform" onSubmit="return checkSearchForm()" class="search-form">
+            <input class="w-380 p-l-8 fl fs-14 ftc-999999 bd-s-ce23435 line-h36 hg-36" type="text" name="keywords" id="keyword" value="请输入关键字" onfocus="if(this.value == '请输入关键字')this.value = ''" onblur="if(this.value == '')this.value='请输入关键字'" autocomplete="off">
+            <input type="hidden" value="k1" name="dataBi">
+            <button type="submit" class="w-65 line-h38 hg-38 bg-ce23435 bg_icon secbtn tx-ind fl">提交</button>
+        </form>
+        <div class="w-455 fl" id="hotkeywords"> <a href="#" class="hot-item ftc-4b4b4b fs-14 line-h30 m-r-15 fl">食品</a> <i class="dsblock bg_icon topnav_line fl tx-ind w-1 hg-30">食品</i> <a href="#" class="hot-item ftc-4b4b4b fs-14 line-h30 m-r-15 m-l-15 fl">水果</a> <i class="dsblock bg_icon topnav_line fl tx-ind w-1  hg-30">水果</i> <a href="#" class="hot-item ftc-4b4b4b fs-14 line-h30 m-r-15 m-l-15 fl">鞋子</a> <i class="dsblock bg_icon topnav_line fl tx-ind w-1  hg-30">鞋子</i> <a href="#" class="hot-item ftc-4b4b4b fs-14 line-h30 m-r-15 m-l-15 fl">手表</a> </div>
+    </div>
+    <!--web search end-->
+    <!--web Shopping Cart start-->
+    <a href="/cart" class="w-160 bd-s-ce23435 line-h38 hg-38 fr curpter text-c m-t-5 fs-14 ftc-999999 dsblock"> <i class="dsblock bg_icon cart_icon w-26 curpter m-l-15 tx-ind fl">购物车</i> 我的购物车 <i id="cartnum" class="dsblock  bg_icon cartnum w-17 curpter m-r-10 fr fs-12 ftc-ffffff">0</i> </a>
+    <!--web Shopping Cart end-->
+</div>
+<!--web nav start-->
+<div class="w-all w-minw ovhidden bd-bs-ed4f2c">
+    <div class="w-main m-auto">
+        <ul class="w-main nav">
+            <li class="fl"><a href="/user" class="fl dsblock p-l-13 p-r-13 m-l-20 fs-16 ftc-626262 line-45 navactive">首页</a></li>
+            <li class="fl"><a href="/store" class="fl dsblock p-l-13 p-r-13 m-l-20 fs-16 ftc-626262 line-45">商城</a></li>
+            <li class="fl"><a href="#" class="fl dsblock p-l-13 p-r-13 m-l-20 fs-16 ftc-626262 line-45">活动专区</a></li>
+            <li class="fl"><a href="#" class="fl dsblock p-l-13 p-r-13 m-l-20 fs-16 ftc-626262 line-45">限时抢购</a></li>
+
+            <div class="clear"></div>
+        </ul>
+    </div>
+</div>
+<!--web nav end-->
+<!--web banner start-->
+<div class="w-all w-minw banner" id="ads">
+    <div id="full-screen-slider">
+        <ul id="slides">
+            <li id="ad1" style="background:url('ad/ad1.jpg') center top no-repeat;"><a href="javascript:void(0)"></a></li>
+            <li id="ad2" style="background:url('ad/ad2.jpg') center top no-repeat;"><a href="javascript:void(0)"></a></li>
+            <li id="ad3" style="background:url('ad/ad3.jpg') center top no-repeat;"><a href="javascript:void(0)"></a></li>
+        </ul>
+    </div>
+</div>
+
+<!--web banner end-->
+<!--web Notice start-->
+<div class="w-main m-auto">
+    <h2 class="fs-16 ftc-6b6b6b font-b9 m-t-15 line-h36">通知公告</h2>
+    <div class="scroll_notice w-main p-b-15">
+        <div class="bd ovhidden hg-35"> <span class="dsblock bg_icon fl w-18 notice_icon tx-ind hg-35" id="notice">通知公告</span>
+            <ul class="infoList w-1170 fr ovhidden" id="noticelist">
+                <li class="fl w-all line-h35"><a href="#" class="dsblock w-all line-h35 fs-14 ftc-0a0a0a one_hidden">欢迎光临本商城！</a></li>
+                <li class="fl w-all line-h35"><a href="#" class="dsblock w-all line-h35 fs-14 ftc-0a0a0a one_hidden">欢迎光临本商城！！</a></li>
+                <li class="fl w-all line-h35"><a href="#" class="dsblock w-all line-h35 fs-14 ftc-0a0a0a one_hidden">投多少送多少！有钱可以任性，也可以放在商城！投多少送多少！有钱可以任性，也可以放在商城！投多少送多少！有钱可以任性，也可以放在商城！</a></li>
+                <li class="fl w-all line-h35"><a href="#" class="dsblock w-all line-h35 fs-14 ftc-0a0a0a one_hidden">投多少送多少！有钱可以任性，也可以放在商城！投多少送多少！有钱可以任性，也可以放在商城！投多少送多少！有钱可以任性，也可以放在商城！投多少送多少！有钱可以任性，也可以放在商城！</a></li>
+                <li class="fl w-all line-h35"><a href="#" class="dsblock w-all line-h35 fs-14 ftc-0a0a0a one_hidden">投多少送多少！有钱可以任性，也可以放在商城！投多少送多少！有钱可以任性，也可以放在商城！投多少送多少！有钱可以任性，也可以放在商城！</a></li>
+                <li class="fl w-all line-h35"><a href="#" class="dsblock w-all line-h35 fs-14 ftc-0a0a0a one_hidden">投多少送多少！有钱可以任性，也可以放在商城！投多少送多少！有钱可以任性，也可以放在商城！</a></li>
+                <li class="fl w-all line-h35"><a href="#" class="dsblock w-all line-h35 fs-14 ftc-0a0a0a one_hidden">投多少送多少！有钱可以任性，也可以放在商城！</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--web Notice end-->
+<script type="text/javascript">
+    jQuery(".scroll_notice").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:5,interTime:50});
+</script>
+<!--web home Sales charts start-->
+<div class="w-1220 m-auto bd-ts-e6e6e6 ovhidden">
+    <div class="scroll_suv ovhidden w-1220">
+        <div class="hd m-t-25 ovhidden w-main m-auto">
+            <h2 class="fs-20 ftc-6b6b6b font-b9 fl"><span class="w-28 dsblock tx-ind bg_icon fiery_icon hg-30 fl m-r-12">销量排行榜</span>销量排行榜</h2>
+
+            <div class="fr"> <a class="dsblock curpter w-26 hg-30 fl bg_icon prev prev_icon m-r-5"></a> <a class="dsblock curpter w-26 hg-30 fl bg_icon next next_icon"></a> </div>
+        </div>
+        <div class="bd w-1220">
+            <ul class="piclist" id="piclist">
+
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        jQuery(".scroll_suv").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:5,trigger:"click"});
+
+    </script>
+</div>
+<!--web home Sales charts end-->
+<!--web home New Arrivals start-->
+<div class="w-1220 m-auto bd-ts-e6e6e6 ovhidden m-t-30">
+    <div class="scroll_suv ovhidden w-1220">
+        <div class="hd m-t-25 ovhidden w-main m-auto">
+            <h2 class="fs-20 ftc-6b6b6b font-b9 fl"><span class="w-28 dsblock tx-ind bg_icon nsale_icon hg-30 fl m-r-12">推荐商品</span>推荐商品</h2>
+            <div class="fr"> <a class="dsblock curpter w-26 hg-30 fl bg_icon prev prev_icon m-r-5"></a> <a class="dsblock curpter w-26 hg-30 fl bg_icon next next_icon"></a> </div>
+        </div>
+        <div class="bd w-1220">
+            <ul class="piclist" id="recommended">
+                <li>
+                    <div class="pic fl"><a href="#"><img src="mall/pics/sum01.jpg" /></a></div>
+                    <div class="title w-all fl m-t-18"><a href="#" class="dsblock w-all fl">
+                        <h3 class="fs-14 ftc-787878 text-l line-h18 tw_hidden fl">一组提案Demo，过稿，讲述了人与自然，车与动物的一种潜移默化的关系，感兴趣的可以看看</h3>
+                        <span class="dsblock fs-14 ftc-ff0000 fl line-h35">￥64</span></a></div>
+                    <div class="title w-all fl m-t-10"> <a href="#" class="dsblock w-104 bg_icon crash m-auto fs-14 line-h32">加入购物车</a> </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        jQuery(".scroll_suv").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:5,trigger:"click"});
+    </script>
+</div>
+<!--web home New Arrivals end-->
+<!--web home Advertisement start-->
+<div class="w-main m-auto m-t-15"> <a href="#" class="dsblock w-595 hg-120 fl homead"><img id="ad4" src="mall/pics/ad01.jpg" alt=""/></a> <a href="#" class="dsblock w-595 hg-120 homead fr"><img id="ad5" src="mall/pics/ad02.jpg" alt=""/></a> </div>
+<!--web home Advertisement end-->
+<!--web home Fiery scramble start-->
+<div class="w-1220 m-auto bd-ts-e6e6e6 ovhidden m-t-30 m-b-40">
+    <div class="scroll_suv ovhidden w-1220">
+        <div class="hd m-t-25 ovhidden w-main m-auto">
+            <h2 class="fs-20 ftc-6b6b6b font-b9 fl"><span class="w-28 dsblock tx-ind bg_icon suv_icon hg-30 fl m-r-12">新品上架</span>新品上架</h2>
+
+            <div class="fr"> <a class="dsblock curpter w-26 hg-30 fl bg_icon prev prev_icon m-r-5"></a> <a class="dsblock curpter w-26 hg-30 fl bg_icon next next_icon"></a> </div>
+        </div>
+        <div class="bd w-1220">
+            <ul class="piclist" id="pictimelist">
+
+
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        jQuery(".scroll_suv").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:5,trigger:"click"});
+    </script>
+</div>
+<!--web home Fiery scramble end-->
+<div class="w-main m-auto">
+    <div class="w-main m-b-10">
+        <div class="w-82 fl m-l-10"> <img src="mall/pics/icon01.png" alt=""/>
+            <p class="text-c fs-16 ftc-000000 line-h36">全正品</p>
+        </div>
+        <div class="w-82 fl m-l-195"> <img src="mall/pics/icon02.png" alt=""/>
+            <p class="text-c fs-16 ftc-000000 line-h36">超保障</p>
+        </div>
+        <div class="w-82 fl m-l-195"> <img src="mall/pics/icon03.png" alt=""/>
+            <p class="text-c fs-16 ftc-000000 line-h36">最放心</p>
+        </div>
+        <div class="w-82 fl m-l-195"> <img src="mall/pics/icon04.png" alt=""/>
+            <p class="text-c fs-16 ftc-000000 line-h36">快捷付</p>
+        </div>
+        <div class="w-82 fr m-r-10"> <img src="mall/pics/icon04.png" alt=""/>
+            <p class="text-c fs-16 ftc-000000 line-h36">限时达</p>
+        </div>
+    </div>
+</div>
+
+<!--web footer start-->
+<div class="w-all w-minw bg-c1d1d1d ovhidden p-t-15">
+    <div class="w-main m-auto footernav">
+        <dl class="fl w-100 m-l-30 m-r-50">
+            <dt><a href="#" class="fl dsblock fs-18 ftc-ffffff line-45 w-all text-c">新手上路</a></dt>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">售后流程</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">购物流程</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">订购方式</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">在线支付</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">公司转账</a></dd>
+        </dl>
+        <dl class="fl w-100 m-l-30 m-r-50">
+            <dt><a href="#" class="fl dsblock fs-18 ftc-ffffff line-45 w-all text-c">配送方式</a></dt>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">货到付款</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">区域配送</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">支付查询</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">支付方式说明</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">如何送礼</a></dd>
+        </dl>
+        <dl class="fl w-100 m-l-30 m-r-50">
+            <dt><a href="#" class="fl dsblock fs-18 ftc-ffffff line-45 w-all text-c">购物指南</a></dt>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">常见问题</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">订购流程</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">注册新会员</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">团购/机票</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">联系客服</a></dd>
+        </dl>
+        <dl class="fl w-100 m-l-30 m-r-50">
+            <dt><a href="#" class="fl dsblock fs-18 ftc-ffffff line-45 w-all text-c">售后服务</a></dt>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">退换货原则</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">售后服务保证</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">换货流程</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">退款说明</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">返修/退换货</a></dd>
+        </dl>
+        <dl class="fl w-100 m-l-30 m-r-50">
+            <dt><a href="#" class="fl dsblock fs-18 ftc-ffffff line-45 w-all text-c">关于我们</a></dt>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">网站故障报告</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">选机咨询</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">投诉与建议</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">节能补贴</a></dd>
+            <dd><a href="#" class="fl dsblock fs-14 ftc-c4c4c4 line-h36 w-all text-c">礼品</a></dd>
+        </dl>
+        <div class="w-180 fr m-r-50">
+            <h3 class="fs-18 ftc-ffffff line-45">联系我们</h3>
+            <p class="fs-20 ftc-ca0303 line-h36">100-000-0000</p>
+            <p class="fs-14 ftc-ffffff line-h36"> 周一至周日9:00-18:00 <br/>
+            </p>
+            <p class="fs-14 ftc-e3393a line-40 bd-s-ce3393a ovhidden bg_icon tel_icon footer_tel">24小时在线客服</p>
+        </div>
+    </div>
+</div>
+<div class="w-all w-minw bg-c000000 ovhidden">
+    <div class="w-main m-auto text-c fs-14 ftc-777777 line-60"> © 2021 版权所有，并保留所有权利。 </div>
+</div>
+<!--web footer end-->
+</body>
+
+<script>
+
+
+    $(function () {
+
+        $.ajax({
+            url:"/itemload",
+            type:"post",
+            success:function (result) {
+
+
+                // let namehtml="<span class='fs-14 line-h30 ftc-6b6b6b dsblock fl'> 送货至：广东省广州市番禺区 </span>  <a href='#' class='dsblock fl line-h30 fs-14 ftc-e23435 m-l-40'>"+"</a> <a href='/login' class='dsblock fl line-h30 fs-14 ftc-e23435 m-l-40\'>Hi,请登录</a>";
+                // $("#name").html(namehtml);
+
+                // //                 let ad123html=`<div id="full-screen-slider">
+                // //     <ul id="slides"><li style="background:url(`+result.ad1+`) center top no-repeat;"><a href="javascript:void(0)"></a></li>
+                // //         <li style="background:url(`+result.ad2+`) center top no-repeat;"><a href="javascript:void(0)"></a></li>
+                // //         <li style="background:url(`+result.ad3+`) center top no-repeat;"><a href="javascript:void(0)"></a></li> </ul>
+                // // </div>`;
+                //
+                //                 $("#ads").html(ad123html);
+                let str1='url("'+result.ad1+'")';
+                let str2='url("'+result.ad2+'")';
+                let str3='url("'+result.ad3+'")';
+                // console.log(str)
+                //  $("#ad1").css('background',"url('ad/ad3.jpg')");
+                $("#ad1").css('background',str1);
+                $("#ad2").css('background',str2);
+                $("#ad3").css('background',str3);
+                $("#ad4").attr("src",result.ad4)
+                $("#ad5").attr("src",result.ad5)
+
+
+                let listhtml="";
+                let data=result.items;
+                // console.log(data[1].id);
+                for(let i=0;i<10;i++){
+                    let num=i+1;
+                    listhtml+="<li> <i class='picspan_icon1'>"+num+"</i>\n" +
+                        "                    <div class='pic fl'><a href='itemdetail?id="+data[i].id+"'><img src='"+data[i].pic+ "'/></a></div>\n" +
+                        "                    <div class='title w-all fl m-t-18'><a href='#' class='dsblock w-all fl'>\n" +
+                        "                        <h3 class='fs-14 ftc-787878 text-l line-h18 tw_hidden fl'>"+data[i].details+"</h3>\n" +
+                        "                    <span class='dsblock fs-14 ftc-ff0000 fl line-h35' style='    width: 75px;'>"+"￥"+data[i].price+"</span></a></div>\n" +
+                        "                    <div class='title w-all fl m-t-10'> <a href='itemdetail?id="+data[i].id+"' class='dsblock w-104 bg_icon crash m-auto fs-14 line-h32'>查看商品</a> </div>\n" +
+                        "                    <input class='id' type='hidden'value='"+data[i].id+"'/>" +
+                        "                    </li>";
+                }
+
+
+                $("#piclist").html(listhtml);
+
+                let recommendedhtml="";
+                let recommendedItems=result.recommendedItem;
+
+                for(let i=0;i<5;i++){
+                    recommendedhtml+=`<li>
+                    <div class="pic fl"><a href="itemdetail?id=`+recommendedItems[i].id+`"><img src="`+recommendedItems[i].pic+`" /></a></div>
+                    <div class="title w-all fl m-t-18"><a href="#" class="dsblock w-all fl">
+                        <h3 class="fs-14 ftc-787878 text-l line-h18 tw_hidden fl">`+recommendedItems[i].details+`</h3>
+                        <span class="dsblock fs-14 ftc-ff0000 fl line-h35" style='    width: 75px;'>￥`+recommendedItems[i].price+`</span></a></div>
+                    <div class="title w-all fl m-t-10"> <a href="#" class="dsblock w-104 bg_icon crash m-auto fs-14 line-h32">加入购物车</a> </div>
+                </li>`;
+
+
+                }
+                $("#recommended").html(recommendedhtml);
+
+
+
+                let timehtml="";
+                let itemsbytime=result.ItemAndBusiness;
+                console.log(itemsbytime)
+                for(let i=0;i<10;i++){
+                    timehtml+=`<li>
+                    <div class="pic fl"><a href="itemdetail?id=`+itemsbytime[i].itemid+`"><img src="`+itemsbytime[i].pic+`" /></a></div>
+                    <div class="title w-all fl m-t-18"><a href="#" class="dsblock w-all fl">
+                        <h3 class="fs-14 ftc-787878 text-l line-h18 tw_hidden fl">`+itemsbytime[i].itemdetails+`</h3>
+                        <span class="dsblock fs-14 ftc-ff0000 fl line-h35" style='    width: 75px;'>￥`+itemsbytime[i].price+`</span></a></div>
+                    <div class="title w-all fl m-t-10"> <a href="#" class="dsblock w-104 bg_icon crash m-auto fs-14 line-h32">加入购物车</a> </div>
+                </li>`;
+                    // console.log(itemsbytime[i].itemid)
+
+                }
+                $("#pictimelist").html(timehtml);
+
+                let cartnum=result.num;
+                $("#cartnum").text(cartnum);
+
+
+                let noticelist=result.noticelist;
+                console.log(noticelist)
+                let noticehtml=``;
+                for(let i=0;i<noticelist.length;i++){
+                    noticehtml+=` <li class="fl w-all line-h35"><a href="#" class="dsblock w-all line-h35 fs-14 ftc-0a0a0a one_hidden">`+noticelist[i].info+`</a></li>`;
+                }
+
+                $("#noticelist").html(noticehtml);
+
+            }
+        })
+
+    });
+</script>
+
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<title>登录</title>
+
+<link rel="stylesheet" href="/login/css/style.css">
+
+<body>
+
+<div class="login-container">
+    <h1>智能商城网站</h1>
+
+    <div class="connect">
+        <p>mei</p>
+    </div>
+
+    <form action="/toRegister" method="post" id="loginForm" onsubmit='return checkForm()'>
+        <div>
+            <input type="text" id="un" name="username" class="username" placeholder="请输入用户名" autocomplete="off"  required/>
+        </div>
+        <div>
+            <input type="password" id="pw" name="password" class="password" placeholder="请输入密码"  oncontextmenu="return false" onpaste="return false" required />
+        </div>
+
+        <div>
+            <input type="text" id="email" name="userEmail"  placeholder="请输入邮箱" onBlur="verifyAddress(this)"  required/>
+        </div>
+
+        <div>
+            <button type="button" id="getCode" style="    width: 100px;  float: left;  color: orange; background-color: #555555;  background: rgba(45,45,45,.15);">获取验证码</button>
+            <input type="text" id="checkcode" name="checkcode"  placeholder="请输入验证码" autocomplete="off" style="    float: right;   width: auto;" required/>
+        </div>
+
+
+        <button id="submit" type="submit">注 册</button>
+    </form>
+
+    <a href="/login">
+        <button type="button" class="register-tis">去登录</button>
+    </a>
+
+</div>
+
+<script src="/login/js/jquery.min.js"></script>
+<script src="login/js/common.js"></script>
+<!--背景图片自动更换-->
+<script src="login/js/supersized.3.2.7.min.js"></script>
+<script src="login/js/supersized-init.js"></script>
+<!--表单验证-->
+<script src="/login/js/jquery.validate.min.js?var1.14.0"></script>
+
+
+</body>
+<script src="/md5.js"></script>
+
+<script>
+
+    $("#getCode").click(function () {
+        $.ajax({
+            url:"/getCode",
+            type:"post",
+            data:{userEmail:$("#email").val()},
+            success:function (data) {
+                // alert(data)
+            }
+        })
+    });
+
+    function checkForm(){
+        let password = document.getElementById("pw");
+        let md5value=$.md5(password.value);
+        password.value=md5value;
+        return true;
+    }
+
+
+    function verifyAddress(obj)
+    {
+
+        var email = obj.value;
+        var pattern =
+            /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+        flag = pattern.test(email);
+        if(flag===false)
+        {
+            // alert("Your email address is correct!");
+            // return true;
+            alert("邮箱格式错误!");
+            obj.value="";
+            return false;
+        }
+
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+</html>
